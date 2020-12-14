@@ -53,9 +53,9 @@ def model_predict(img_path, model):
     preds = model.predict(x)
     preds=np.argmax(preds, axis=1)
     if preds==0:
-        preds="The Person is not infected With Malaria"
-    else:
         preds="The Person is infected With Malaria"
+    else:
+        preds="The Person is not infected With Malaria"
     
     
     return preds
